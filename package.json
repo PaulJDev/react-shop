@@ -12,7 +12,7 @@
     "react",
     "javascript"
   ],
-  "author": "Paul Javaloyes <pjavaloy@emeal.nttdata.com>",
+  "author": "Paul Javaloyes <pauljavaloyesdev@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.17.5",
