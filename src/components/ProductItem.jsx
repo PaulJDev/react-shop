@@ -2,23 +2,24 @@ import React, { useState } from 'react';
 import '@styles/ProductItem.scss';
 
 import iAddToCart from '@icons/bt_add_to_cart.svg'
-const bike = 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 
-const ProductItem = () => {
+const ProductItem = ({ product }) => {
+	console.log(product)
 	const [cart, setCart] = useState([])
 	const handleClick = () => {
 		setCart([]);
 	}
+	const price = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(product.price)
 	return (
 		<div className="ProductItem">
-			<img src={bike} alt="" />
+			<img src={product.images.at(0)} alt={product.title} />
 			<div className="product-info">
 				<div>
-					<p>$120,00</p>
-					<p>Bike</p>
+					<p>{price}</p>
+					<p>{product.title}</p>
 				</div>
 				<figure onClick={handleClick} >
-					<img src={iAddToCart} alt="" />
+					<img src={iAddToCart} alt="Add to cart" />
 				</figure>
 			</div>
 		</div>
