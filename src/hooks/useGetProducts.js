@@ -9,6 +9,7 @@ export const useGetProducts = (API) => {
 		.then(res => {
 			setProducts(res)
 		})
+		
 	}, [])
 
 
