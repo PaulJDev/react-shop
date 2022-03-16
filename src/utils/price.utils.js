@@ -1,0 +1,1 @@
+export const priceFormat = price => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(price)
